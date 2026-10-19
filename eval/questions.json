@@ -1,0 +1,107 @@
+[
+  {
+    "id": "q01",
+    "type": "narrative",
+    "company": "PANW",
+    "period": "2026-07-31",
+    "question": "What supply chain and component sourcing risks does Palo Alto Networks cite?",
+    "gold_answer": "Tariffs, sanctions and export controls raising component costs; supply chain disruption and inflation in Q4 fiscal 2026 hurting gross margin; no long-term capacity or pricing guarantees from manufacturers or component suppliers; a limited number of suppliers including sole-source providers, concentrated in Asia, with China-Taiwan and US-China tensions; constrained cloud compute capacity at third-party providers.",
+    "source_quote": "The manufacturing operations of some suppliers are geographically concentrated in Asia, making our supply chain vulnerable to regional disruptions",
+    "source_item": "1A"
+  },
+  {
+    "id": "q02",
+    "type": "narrative",
+    "company": "CRM",
+    "period": "2026-01-31",
+    "question": "What regulatory risks does Salesforce cite related to AI?",
+    "gold_answer": "Regulators are applying existing data protection, privacy and consumer protection laws to AI, including generative AI, and are enacting AI-specific frameworks: the EU AI Act, the Utah Artificial Intelligence Policy Act, the Colorado Artificial Intelligence Act and draft CCPA rules on automated decision-making. Rapidly evolving and sometimes conflicting global laws (including the EU Digital Services Act and EU AI Act) could increase compliance costs, restrict features or data flows, delay launches, and expose the company to penalties or litigation. These laws may impose additional compliance obligations or restrictions on products, services or business practices, and failure or perceived failure to comply could adversely affect the business. The uncertain regulatory environment may lead customers to limit the data they provide or their use of the products.",
+    "source_quote": "could increase compliance costs, restrict features or data flows, delay launches and expose us to penalties or litigation",
+    "source_item": "1A"
+  },
+  {
+    "id": "q03",
+    "type": "narrative",
+    "company": "CRM",
+    "period": "2026-01-31",
+    "question": "How does Salesforce say AI affects its cybersecurity risk?",
+    "gold_answer": "Threat actors use or exploit AI, including generative and agentic AI, to make attacks more sophisticated, faster, larger in scale and harder to detect. Salesforce's own adoption of AI in its products, services and internal systems may introduce novel security, data governance or operational risks.",
+    "source_quote": "threat actors are using and exploiting these technologies to enhance the sophistication, scale, speed and effectiveness of security threats",
+    "source_item": "1A"
+  },
+  {
+    "id": "q04",
+    "type": "narrative",
+    "company": "NOW",
+    "period": "2025-12-31",
+    "question": "Who does ServiceNow say it competes with, and how does it characterize the market?",
+    "gold_answer": "The market is highly competitive and rapidly evolving, characterized by fragmentation, low barriers to entry, shifting customer needs and frequent introductions of new products and services. Competitors include enterprise application software vendors, both cloud-based and on-premises, such as Microsoft, Oracle, SAP, Salesforce and Workday; new technologies and entrants, including point and platform solutions, particularly those related to AI; custom-developed and in-house solutions; technology consulting firms; systems integrators; and software resellers.",
+    "source_quote": "enterprise application software vendors, both cloud-based and on-premises, such as Microsoft, Oracle, SAP, Salesforce and Workday",
+    "source_item": "1"
+  },
+  {
+    "id": "q05",
+    "type": "numeric",
+    "company": "CRM",
+    "period": "2026-01-31",
+    "question": "What were Salesforce's total revenues for fiscal 2026, and how did that compare with fiscal 2025?",
+    "gold_answer": "Total revenues were $41,525 million in fiscal 2026 (year ended January 31, 2026), compared with $37,895 million in fiscal 2025, an increase of about 9.6%. Subscription and support revenues were $39,388 million, about 95 percent of the total.",
+    "source_quote": "Subscription and support revenues accounted for approximately 95 percent of our total revenues for fiscal 2026",
+    "source_item": "7",
+    "table_only": true
+  },
+  {
+    "id": "q06",
+    "type": "numeric",
+    "company": "ADBE",
+    "period": "2025-11-28",
+    "question": "What did Adobe report for total revenue in fiscal 2025, and what was the growth rate versus fiscal 2024?",
+    "gold_answer": "Total revenue was $23,769 million in fiscal 2025 (year ended November 28, 2025), up 11% from $21,505 million in fiscal 2024. Subscription revenue was $22,904 million (up 12%), about 96 percent of total revenue. Product revenue fell 16% to $325 million, and services and other fell 10% to $540 million.",
+    "source_quote": "Our subscription revenue is comprised primarily of fees we charge for our subscription and hosted service offerings",
+    "source_item": "7",
+    "table_only": true
+  },
+  {
+    "id": "q07",
+    "type": "numeric",
+    "company": "WDAY",
+    "period": "2026-01-31",
+    "question": "What was Workday's total subscription revenue backlog at January 31, 2026, and how did it change from the prior year?",
+    "gold_answer": "Total subscription revenue backlog was $28,101 million, up 12% from $25,056 million a year earlier. The 12-month subscription revenue backlog was $8,833 million, up 16% from $7,631 million.",
+    "source_quote": "Our subscription revenue backlog, which is also referred to as remaining performance obligations for subscription contracts",
+    "source_item": "7",
+    "table_only": true
+  },
+  {
+    "id": "q08",
+    "type": "cross-year",
+    "company": "ORCL",
+    "period": "2026-05-31",
+    "compare_period": "2025-05-31",
+    "question": "How did the wording of Oracle's risk factor 'Our AI products may not operate as anticipated' change between its 2025 and 2026 10-Ks?",
+    "gold_answer": "PROVISIONAL. 2025: Oracle has invested and expects to continue investing significant resources to build and support its AI products and relies on partners and suppliers to produce some of them. 2026: Oracle says it is building AI into many product offerings and making AI available for customers to use in solutions they build, and that it has made significant investments in AI initiatives, including infrastructure and headcount.",
+    "source_quote": "We are building AI into many of our product offerings and we are also making AI available for our customers to use in solutions that they build",
+    "source_item": "1A"
+  },
+  {
+    "id": "q09",
+    "type": "cross-year",
+    "company": "INTU",
+    "period": "2026-07-31",
+    "compare_period": "2025-07-31",
+    "question": "How did Intuit's description of its customer base, products and AI strategy change between its 2025 and 2026 10-K business sections?",
+    "gold_answer": "Customers served fell from approximately 100 million (2025) to approximately 93 million (2026). The product list added Intuit Accountant Suite to TurboTax, Credit Karma, QuickBooks, Mailchimp and Intuit Enterprise Suite. The AI strategy wording changed from connecting customers to a virtual team of AI agents and AI-enabled human experts to bringing together data, AI, and human tax and financial experts into a single system of intelligence that does the work for customers. The 2026 filing also adds that proprietary data, domain-specific AI platform capabilities and AI-powered human expertise help customers make high-stakes financial decisions with confidence.",
+    "source_quote": "brings together data, AI, and human tax and financial experts into a single system of intelligence that does the work for customers",
+    "source_item": "1"
+  },
+  {
+    "id": "q10",
+    "type": "unanswerable",
+    "company": "WDAY",
+    "period": "2026-01-31",
+    "question": "What discount percentage does Workday give its largest enterprise customers?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
+  }
+]
