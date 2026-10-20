@@ -103,5 +103,35 @@
     "gold_answer": "UNANSWERABLE",
     "source_quote": "",
     "source_item": "none"
+  },
+  {
+    "id": "q11",
+    "type": "unanswerable",
+    "company": "MSFT",
+    "period": "2026-06-30",
+    "question": "What is Microsoft's internal gross margin target for Azure next year?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
+  },
+  {
+    "id": "q12",
+    "type": "unanswerable",
+    "company": "PANW",
+    "period": "2026-07-31",
+    "question": "What was Palo Alto Networks' revenue for fiscal 2030?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
+  },
+  {
+    "id": "q13",
+    "type": "unanswerable",
+    "company": "NOW",
+    "period": "2025-12-31",
+    "question": "What is the name of ServiceNow's largest individual customer by annual contract value?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
   }
 ]
