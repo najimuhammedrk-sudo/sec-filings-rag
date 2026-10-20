@@ -40,3 +40,29 @@ Findings: removing the company and period filter dropped single-filing hit@5 fro
 
 q09 diagnosis: the 2025 evidence sentence ("virtual team of AI agents") is in section\_1, while section\_0 (rank 5) holds the start of the same overview; chunk boundaries split the overview and the multi-topic question retrieves neither chunk well.
 
+
+
+\## Run 4: query routing added
+
+
+
+| mode | collection | hit@1/3/5 (all 11) |
+
+|---|---|---|
+
+| filtered | fixed | 5/11, 6/11, 9/11 |
+
+| filtered | section | 4/11, 5/11, 7/11 |
+
+| routed | fixed | 4/11, 5/11, 6/11 |
+
+| routed | section | 3/11, 4/11, 7/11 |
+
+| unfiltered | fixed | 1/11, 1/11, 3/11 |
+
+| unfiltered | section | 1/11, 3/11, 4/11 |
+
+
+
+Findings: company routing found the right company on 15 of 15 questions and roughly doubled hit@5 versus unfiltered. It stayed below filtered because questions without a year search all three years.
+

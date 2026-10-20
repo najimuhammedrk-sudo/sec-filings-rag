@@ -1,10 +1,12 @@
 import json
+import sys
+sys.path.insert(0, "src")
 import chromadb
 from sentence_transformers import SentenceTransformer
+from route import route, build_where
 
 K = 5
 
-# single-filing questions: a chunk is a hit if it contains ANY of these strings
 EVIDENCE = {
     "q01": ["limited sources of supply", "sole source providers"],
     "q02": ["EU AI Act"],
@@ -14,8 +16,6 @@ EVIDENCE = {
     "q06": ["23,769"],
     "q07": ["28.1 billion", "28,101"],
 }
-
-# cross-year questions: evidence per period; BOTH periods must be retrieved
 CROSS = {
     "q08": {"2026-05-31": ["if we incur costs higher than expected"],
             "2025-05-31": ["expect to continue to invest significant resources"]},
@@ -27,15 +27,15 @@ CROSS = {
             "2025-06-30": ["gross margin percentage decreased to 69%"]},
 }
 
-MODES = ["filtered", "unfiltered"]
+MODES = ["filtered", "routed", "unfiltered"]
 model = SentenceTransformer("all-MiniLM-L6-v2")
 client = chromadb.PersistentClient(path="data/chroma")
 cols = {n: client.get_collection(n) for n in ("fixed", "section")}
 qs = json.load(open("eval/questions.json", encoding="utf-8"))
 
 
-def where_for(q, period):
-    return {"$and": [{"company": q["company"]}, {"period": period}]}
+def where_for(company, period):
+    return {"$and": [{"company": company}, {"period": period}]}
 
 
 def query(col, emb, where):
@@ -58,32 +58,35 @@ res = {(m, n): {"single": [], "cross": [], "unans": []} for m in MODES for n in 
 
 for q in qs:
     emb = model.encode([q["question"]]).tolist()
+    tick, pers = route(q["question"])
+    print(f"{q['id']:<5}routed -> {tick} {pers}")
     for mode in MODES:
+        if mode == "filtered":
+            w_single = where_for(q["company"], q["period"])
+        elif mode == "routed":
+            w_single = build_where(tick, pers)
+        else:
+            w_single = None
         for name, col in cols.items():
-            bucket = res[(mode, name)]
+            b = res[(mode, name)]
             if q["type"] == "unanswerable":
-                w = where_for(q, q["period"]) if mode == "filtered" else None
-                _, _, dists = query(col, emb, w)
-                bucket["unans"].append((q["id"], round(dists[0], 3)))
-                print(f"{q['id']:<5}{mode:<11}{name:<9}best distance {dists[0]:.3f}")
+                _, _, dists = query(col, emb, w_single)
+                b["unans"].append((q["id"], round(dists[0], 3)))
             elif q["id"] in CROSS:
                 ranks = []
-                if mode == "filtered":
-                    for per, terms in CROSS[q["id"]].items():
-                        docs, metas, _ = query(col, emb, where_for(q, per))
-                        ranks.append(first_rank(docs, metas, terms, q["company"], per))
-                else:
-                    docs, metas, _ = query(col, emb, None)
-                    for per, terms in CROSS[q["id"]].items():
-                        ranks.append(first_rank(docs, metas, terms, q["company"], per))
+                for per, terms in CROSS[q["id"]].items():
+                    split = mode == "filtered" or (
+                        mode == "routed" and tick == q["company"] and per in pers)
+                    w = where_for(q["company"], per) if split else w_single
+                    docs, metas, _ = query(col, emb, w)
+                    ranks.append(first_rank(docs, metas, terms, q["company"], per))
                 rank = None if any(r is None for r in ranks) else max(ranks)
-                bucket["cross"].append(rank)
-                print(f"{q['id']:<5}{mode:<11}{name:<9}{rank or 'miss'}  (per-period {ranks})")
+                b["cross"].append(rank)
+                print(f"{q['id']:<5}{mode:<11}{name:<9}{rank or 'miss'} {ranks}")
             elif q["id"] in EVIDENCE:
-                w = where_for(q, q["period"]) if mode == "filtered" else None
-                docs, metas, _ = query(col, emb, w)
+                docs, metas, _ = query(col, emb, w_single)
                 rank = first_rank(docs, metas, EVIDENCE[q["id"]], q["company"], q["period"])
-                bucket["single"].append(rank)
+                b["single"].append(rank)
                 print(f"{q['id']:<5}{mode:<11}{name:<9}{rank or 'miss'}")
 
 
@@ -96,11 +99,6 @@ for (mode, name), b in res.items():
     allr = b["single"] + b["cross"]
     print(f"{mode:<11}{name:<9} all {tally(allr)} | single {tally(b['single'])} | cross {tally(b['cross'])}")
 
-print("\n=== UNANSWERABLE: best distance per question ===")
+print("\n=== UNANSWERABLE best distance ===")
 for (mode, name), b in res.items():
     print(f"{mode:<11}{name:<9}", b["unans"])
-
-print("\n=== ROWS FOR results_log.md (fill in the run number and change) ===")
-for (mode, name), b in res.items():
-    allr = b["single"] + b["cross"]
-    print(f"| N | {mode}, {name} | {tally(allr)} |")
