@@ -66,3 +66,21 @@ q09 diagnosis: the 2025 evidence sentence ("virtual team of AI agents") is in se
 
 Findings: company routing found the right company on 15 of 15 questions and roughly doubled hit@5 versus unfiltered. It stayed below filtered because questions without a year search all three years.
 
+
+
+\## Run 5: routing defaults to the latest filing when no year is named
+
+
+
+| mode | collection | hit@1/3/5 (all 11) |
+
+|---|---|---|
+
+| routed | fixed | 5/11, 5/11, 8/11 |
+
+| routed | section | 4/11, 5/11, 7/11 |
+
+
+
+Change: one edit in route.py. Run 4 routed was fixed 4/11, 5/11, 6/11 and section 3/11, 4/11, 7/11. Routed now sits within one question of filtered. Caveat: most questions target the newest filing, so the default favors this test set. A first attempt at the edit routed every question to PANW because of a stale bytecode cache; clearing src/\_\_pycache\_\_ fixed it.
+

@@ -32,8 +32,9 @@ def route(question):
     tick = best[0]
     years = set(re.findall(r"\b(20\d\d)\b", question))
     periods = sorted(p for p in PERIODS.get(tick, []) if p[:4] in years)
+    if not periods:
+        periods = [max(PERIODS.get(tick, []))]
     return tick, periods
-
 
 def build_where(tick, periods):
     if not tick:
