@@ -72,15 +72,15 @@
     "source_item": "7",
     "table_only": true
   },
-  {
+    {
     "id": "q08",
     "type": "cross-year",
     "company": "ORCL",
     "period": "2026-05-31",
     "compare_period": "2025-05-31",
     "question": "How did the wording of Oracle's risk factor 'Our AI products may not operate as anticipated' change between its 2025 and 2026 10-Ks?",
-    "gold_answer": "PROVISIONAL. 2025: Oracle has invested and expects to continue investing significant resources to build and support its AI products and relies on partners and suppliers to produce some of them. 2026: Oracle says it is building AI into many product offerings and making AI available for customers to use in solutions they build, and that it has made significant investments in AI initiatives, including infrastructure and headcount.",
-    "source_quote": "We are building AI into many of our product offerings and we are also making AI available for our customers to use in solutions that they build",
+    "gold_answer": "The 2026 filing adds or changes: (1) Oracle says it is building AI into many product offerings and making AI available for customers to use in solutions they build, and that it has made significant investments in AI initiatives including infrastructure and headcount, versus 2025's statement that it has invested and expects to continue investing significant resources; (2) a new trigger for failing to recoup AI investments, namely costs higher than expected to build and support AI products; (3) a new paragraph that AI models and training approaches may contain errors or limitations and that biased, incomplete or inaccurate data could produce offensive, unlawful, inaccurate or harmful outputs, with brand, competitive or legal harm if responsible-AI policies are ineffective; (4) copyright wording changed from improper use of protected material to inadvertent use or incorporation in model training or outputs; (5) expanded regulatory discussion: AI-specific rules being passed worldwide, the US framework still developing via executive orders and state legislation, EU AI Act obligations in effect and phasing in through 2030, and new risk of government restrictions on AI infrastructure, compute, model weights, cross-border AI services, customer access and localization or nationalization.",
+    "source_quote": "if we incur costs higher than expected to build and support our AI products",
     "source_item": "1A"
   },
   {
@@ -133,5 +133,27 @@
     "gold_answer": "UNANSWERABLE",
     "source_quote": "",
     "source_item": "none"
+  },
+  {
+    "id": "q14",
+    "type": "cross-year",
+    "company": "CRM",
+    "period": "2026-01-31",
+    "compare_period": "2025-01-31",
+    "question": "How did Salesforce's discussion of agentic AI in its risk factors change between its fiscal 2025 and fiscal 2026 10-Ks?",
+    "gold_answer": "Both filings mention agentic AI in the risk of scaling operations (additional investments) and in the risk that AI offerings such as Agentforce present adoption challenges. The fiscal 2026 filing adds a cybersecurity risk: as generative and agentic AI evolve, threat actors are using and exploiting them to make security threats more sophisticated, faster, larger in scale and harder to detect. The platform is named Salesforce Platform in fiscal 2025 and Agentforce 360 Platform in fiscal 2026.",
+    "source_quote": "threat actors are using and exploiting these technologies to enhance the sophistication, scale, speed and effectiveness of security threats",
+    "source_item": "1A"
+  },
+  {
+    "id": "q15",
+    "type": "cross-year",
+    "company": "MSFT",
+    "period": "2026-06-30",
+    "compare_period": "2025-06-30",
+    "question": "How did Microsoft's explanation of its Microsoft Cloud gross margin percentage change between its fiscal 2025 and fiscal 2026 10-Ks?",
+    "gold_answer": "Microsoft Cloud gross margin percentage decreased to 69% in fiscal 2025, driven by the impact of scaling AI infrastructure and offset in part by Azure efficiency gains. It decreased further to 66% in fiscal 2026, driven by continued investments in AI infrastructure and growing AI product usage, offset in part by efficiency gains in Azure and Microsoft 365 Commercial cloud.",
+    "source_quote": "Microsoft Cloud gross margin percentage decreased to 66% driven by continued investments in AI infrastructure and growing AI product usage",
+    "source_item": "7"
   }
 ]
