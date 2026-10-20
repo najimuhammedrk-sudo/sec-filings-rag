@@ -8,10 +8,12 @@ from sentence_transformers import SentenceTransformer
 SECTIONS = Path("data/sections")
 DB_PATH = "data/chroma"
 MODEL_NAME = "all-MiniLM-L6-v2"
-FIXED_WORDS = 200
-FIXED_OVERLAP = 40
+FIXED_WORDS = 150
+FIXED_OVERLAP = 30
 PARA_MIN_WORDS = 60
-PARA_MAX_WORDS = 350
+PARA_MAX_WORDS = 150
+
+
 
 
 def clean(text):
