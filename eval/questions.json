@@ -45,7 +45,7 @@
     "company": "CRM",
     "period": "2026-01-31",
     "question": "What were Salesforce's total revenues for fiscal 2026, and how did that compare with fiscal 2025?",
-    "gold_answer": "Total revenues were $41,525 million in fiscal 2026 (year ended January 31, 2026), compared with $37,895 million in fiscal 2025, an increase of about 9.6%. Subscription and support revenues were $39,388 million, about 95 percent of the total.",
+    "gold_answer": "Total revenues were $41,525 million in fiscal 2026 (year ended January 31, 2026), compared with $37,895 million in fiscal 2025, an increase of approximately 10%. Subscription and support revenues were $39,388 million, about 95 percent of the total.",
     "source_quote": "Subscription and support revenues accounted for approximately 95 percent of our total revenues for fiscal 2026",
     "source_item": "7",
     "table_only": true
