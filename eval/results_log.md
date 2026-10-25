@@ -99,4 +99,17 @@ Change: one edit in route.py. Run 4 routed was fixed 4/11, 5/11, 6/11 and sectio
 
 
 Caveats: n=4 unanswerable; answer quality and faithfulness not yet scored; alias model, not pinned.
+## Run 7: answer step with 10 unanswerable questions (q10-q13, q16-q21)
+
+
+
+| model | unanswerable refused | answerable wrongly refused | errors |
+
+|---|---|---|---|
+
+| gemini-flash-lite-latest (alias) | 10/10 | 2/11 (q08, q14, cross-year) | 0 |
+
+
+
+Caveats: n=10 unanswerable, mostly specific-figure-not-disclosed cases; faithfulness of answered questions not yet scored; alias model, not pinned.
 

@@ -155,5 +155,65 @@
     "gold_answer": "Microsoft Cloud gross margin percentage decreased to 69% in fiscal 2025, driven by the impact of scaling AI infrastructure and offset in part by Azure efficiency gains. It decreased further to 66% in fiscal 2026, driven by continued investments in AI infrastructure and growing AI product usage, offset in part by efficiency gains in Azure and Microsoft 365 Commercial cloud.",
     "source_quote": "Microsoft Cloud gross margin percentage decreased to 66% driven by continued investments in AI infrastructure and growing AI product usage",
     "source_item": "7"
+  },
+  {
+    "id": "q16",
+    "type": "unanswerable",
+    "company": "CRM",
+    "period": "2026-01-31",
+    "question": "What was Salesforce's customer churn rate by product cloud?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
+  },
+  {
+    "id": "q17",
+    "type": "unanswerable",
+    "company": "ORCL",
+    "period": "2026-05-31",
+    "question": "How many individual customers does Oracle Cloud Infrastructure have?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
+  },
+  {
+    "id": "q18",
+    "type": "unanswerable",
+    "company": "ADBE",
+    "period": "2025-11-28",
+    "question": "How many paying subscribers does Adobe Firefly have?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
+  },
+  {
+    "id": "q19",
+    "type": "unanswerable",
+    "company": "INTU",
+    "period": "2026-07-31",
+    "question": "How many TurboTax returns were filed by customers in Texas?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
+  },
+  {
+    "id": "q20",
+    "type": "unanswerable",
+    "company": "WDAY",
+    "period": "2026-01-31",
+    "question": "What was Workday's employee turnover rate in fiscal 2026?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
+  },
+  {
+    "id": "q21",
+    "type": "unanswerable",
+    "company": "NOW",
+    "period": "2025-12-31",
+    "question": "What stock price target does ServiceNow management set for 2027?",
+    "gold_answer": "UNANSWERABLE",
+    "source_quote": "",
+    "source_item": "none"
   }
 ]
