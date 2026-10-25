@@ -1,4 +1,4 @@
-\# Retrieval results log (q01-q07, filtered by company and period, K=5)
+\# Retrieval results log (K=5).
 
 
 
@@ -100,7 +100,8 @@ Change: one edit in route.py. Run 4 routed was fixed 4/11, 5/11, 6/11 and sectio
 
 Caveats: n=4 unanswerable; answer quality and faithfulness not yet scored; alias model, not pinned.
 
-## Run 7: answer step with 10 unanswerable questions (q10-q13, q16-q21)
+
+\## Run 7: answer step with 10 unanswerable questions (q10-q13, q16-q21)
 
 
 
@@ -114,7 +115,8 @@ Caveats: n=4 unanswerable; answer quality and faithfulness not yet scored; alias
 
 Caveats: n=10 unanswerable, mostly specific-figure-not-disclosed cases; faithfulness of answered questions not yet scored; alias model, not pinned.
 
-## Run 8: per-period retrieval for questions naming two years (3 chunks per period)
+
+\## Run 8: per-period retrieval for questions naming two years (3 chunks per period)
 
 
 
@@ -127,9 +129,8 @@ Caveats: n=10 unanswerable, mostly specific-figure-not-disclosed cases; faithful
 
 
 Change: one edit in answer.py retrieve(). Run 7 was 10/10 and 2/11. q05 now correct; q06, q08 partial; q09 off-target; q14 refused. Refusal score does not measure answer correctness. Caveat: the change targeted questions in this set.
+
 ## Run 9: index cleaning no longer deletes short numeric table lines
-
-
 
 | model | unanswerable refused | answerable wrongly refused | errors |
 
@@ -139,5 +140,5 @@ Change: one edit in answer.py retrieve(). Run 7 was 10/10 and 2/11. q05 now corr
 
 
 
-Change: clean() in index.py. Chunks: fixed 6272 to 6290, section 5653 to 5660. Chunk check confirms the 11% now survives in four ADBE chunks. q06 still refused in the answer run; cause under investigation (retrieval vs model variance). Router gap found: q19 names no company (TurboTax), routed to None.
+Change: clean() in index.py. Chunks: fixed 6272 to 6290, section 5653 to 5660. Chunk check confirms the 11% now survives in four ADBE chunks. q06 still refuses. Retrieval check: none of the 6 chunks sent contains 23,769 or '11 %'; the four chunks that do ranked outside the top 6. Cause is retrieval, not the prompt. Router gap found: q19 names no company (TurboTax), routed to None.
 
