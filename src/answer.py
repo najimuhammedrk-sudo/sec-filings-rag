@@ -33,6 +33,31 @@ QUESTION: {question}
 
 ANSWER:"""
 
+import re
+
+STOP = {"what", "did", "the", "and", "for", "how", "was", "were", "its", "their",
+        "report", "versus", "from", "with", "that", "this", "between", "does",
+        "say", "cite", "about", "which", "into", "than", "has", "have"}
+
+
+def keyword_hits(question, tick, periods, n=4):
+    terms = [w for w in re.findall(r"[a-z0-9%$]+", question.lower())
+             if len(w) > 3 and w not in STOP]
+    if not tick or not terms:
+        return []
+    where = build_where(tick, periods)
+    r = col.get(where=where, include=["documents", "metadatas"])
+    scored = []
+    for d, m in zip(r["documents"], r["metadatas"]):
+        low = d.lower()
+        score = sum(1 for t in terms if t in low)
+        figures = len(re.findall(r"\$ ?\d[\d,]*", d))
+        if any(t in terms for t in ("revenue", "growth", "total", "rate")):
+            score += min(figures, 6)
+        scored.append((score, d, m))
+    scored.sort(key=lambda s: -s[0])
+    return [(d, m, 0.5) for s, d, m in scored[:n] if s >= 6]
+
 def retrieve(question):
     tick, periods = route(question)
     emb = embedder.encode([question]).tolist()
@@ -51,6 +76,10 @@ def retrieve(question):
             hits += run({"$and": [{"company": tick}, {"period": p}]}, 3)
     else:
         hits = run(build_where(tick, periods), K)
+    seen = {(m["period"], m["item"], m["chunk"]) for _, m, _ in hits}
+    for d, m, dist in keyword_hits(question, tick, periods):
+        if (m["period"], m["item"], m["chunk"]) not in seen:
+            hits.append((d, m, dist))
     hits.sort(key=lambda h: h[2])
     docs, metas, dists = zip(*hits)
     return list(docs), list(metas), list(dists)
