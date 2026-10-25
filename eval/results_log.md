@@ -94,7 +94,7 @@ Change: one edit in route.py. Run 4 routed was fixed 4/11, 5/11, 6/11 and sectio
 
 |---|---|---|---|
 
-| gemini-flash-lite-latest (alias) | 4/4 | 2/11 (q08, q14, cross-year) | 0 |
+| gemini-flash-lite-latest (alias) 4/4 | 2/11 (q08, q14, cross-year)
 
 
 
@@ -110,7 +110,7 @@ Caveats: n=4 unanswerable; answer quality and faithfulness not yet scored; alias
 
 |---|---|---|---|
 
-| gemini-flash-lite-latest (alias) | 10/10 | 2/11 (q08, q14, cross-year) | 0 |
+| gemini-flash-lite-latest (alias) 10/10 | 2/11 (q08, q14, cross-year)
 
 
 
@@ -132,7 +132,8 @@ Caveats: n=10 unanswerable, mostly specific-figure-not-disclosed cases; faithful
 
 Change: one edit in answer.py retrieve(). Run 7 was 10/10 and 2/11. q05 now correct; q06, q08 partial; q09 off-target; q14 refused. Refusal score does not measure answer correctness. Caveat: the change targeted questions in this set.
 
-## Run 9: index cleaning no longer deletes short numeric table lines
+\## Run 9: index cleaning no longer deletes short numeric table lines
+
 
 
 | model | unanswerable refused | answerable wrongly refused | errors |
@@ -145,7 +146,9 @@ Change: one edit in answer.py retrieve(). Run 7 was 10/10 and 2/11. q05 now corr
 
 Change: clean() in index.py. Chunks: fixed 6272 to 6290, section 5653 to 5660. Chunk check confirms the 11% now survives in four ADBE chunks. q06 still refuses. Retrieval check: none of the 6 chunks sent contains 23,769 or '11 %'; the four chunks that do ranked outside the top 6. Cause is retrieval, not the prompt. Router gap found: q19 names no company (TurboTax), routed to None.
 
-## Run 10: keyword merge with figure-density scoring added to retrieve()
+
+
+\## Run 10: keyword merge with figure-density scoring added to retrieve()
 
 
 
@@ -153,9 +156,9 @@ Change: clean() in index.py. Chunks: fixed 6272 to 6290, section 5653 to 5660. C
 
 |---|---|---|---|
 
-| gemini-flash-lite-latest (alias) | x/10 | y/11 | 0 |
+| gemini-flash-lite-latest (alias) | 10/10 | 1/11 (q14) | 0 |
 
 
 
-Change: keyword\_hits() merged into retrieve(); candidates scored by word overlap plus count of $ figures when the question asks about revenue, growth, total or rate. First version (word overlap only) did not change q06; the figure-density version retrieves the table chunk containing 23,769 and 11 %. Caveat: the scoring was adjusted after seeing q06 fail, so this is tuned on the test set; needs fresh numeric questions to confirm.
+Change: keyword\_hits() merged into retrieve(); candidates scored by word overlap plus count of $ figures when the question asks about revenue, growth, total or rate. First version (word overlap only) did not change q06; the figure-density version retrieves the table chunk containing 23,769 and 11 %. Caveat: the scoring was adjusted after seeing q06 fail, so this is tuned on the test set; needs fresh numeric questions to confirm.q06 now answers correctly ($23,769 million, up 11%, cited to chunk 23); Run 9 refused it. Unanswerable score unchanged at 10/10.
 
