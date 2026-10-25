@@ -1,0 +1,245 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "rows": [
+    {
+      "id": "q01",
+      "type": "narrative",
+      "question": "What supply chain and component sourcing risks does Palo Alto Networks cite?",
+      "answer": "Based on the provided passages, Palo Alto Networks cites the following supply chain and component sourcing risks:\n\n* Being obligated to purchase excess inventory that cannot be sold, which results in write-downs, increased carrying costs, and lower gross margins [PANW 2026-07-31 1A 98].\n* Underestimating demand, leading to insufficient supply, product shortages, delayed deliveries, lost sales opportunities, and potential damage to customer relationships [PANW 2026-07-31 1A 98].\n* Production interruptions caused by natural disasters, epidemics or pandemics, capacity shortages, or quality problems, which negatively affect sales, business, and operating results [PANW 2026-07-31 1A 98].\n* Reliance on key hardware components (including integrated circuit components) purchased from a limited number of suppliers, including sole source providers [PANW 2026-07-31 1A 98].\n* Geographical concentration of some suppliers' manufacturing operations in Asia, making the supply chain vulnerable to regional disruptions and international regulations such as tariffs, sanctions, and export controls [PANW 2026-07-31 1A 98].\n* Tensions between China and Taiwan, and between the U.S. and China, which have increased costs and could adversely impact the business or results of operations [PANW 2026-07-31 1A 98, PANW 2026-07-31 1A 99].\n* The lack of volume purchase contracts with component suppliers, meaning they could cease selling to the company or change prices at any time [PANW 2026-07-31 1A 99].\n* A global shortage of memory-related components (combined with certain hardware appliances requiring higher memory content), leading to increased production costs [PANW 2026-07-31 1A 99].\n* The potential need to redesign products and qualify new suppliers if unable to obtain sufficient components on commercially reasonable terms, resulting in lost sales opportunities and customer relationship damage [PANW 2026-07-31 1A 99].\n* Inadequate disaster recovery plans for the company and its suppliers, which may further increase risks [PANW 2026-07-31 1A 151].",
+      "refused": false,
+      "best_distance": 0.415,
+      "cited_chunks": [
+        "PANW 2026-07-31 1A 98",
+        "PANW 2026-07-31 1 77",
+        "PANW 2026-07-31 1A 151",
+        "PANW 2026-07-31 1 0",
+        "PANW 2026-07-31 1A 99"
+      ],
+      "gold_answer": "Tariffs, sanctions and export controls raising component costs; supply chain disruption and inflation in Q4 fiscal 2026 hurting gross margin; no long-term capacity or pricing guarantees from manufacturers or component suppliers; a limited number of suppliers including sole-source providers, concentrated in Asia, with China-Taiwan and US-China tensions; constrained cloud compute capacity at third-party providers."
+    },
+    {
+      "id": "q02",
+      "type": "narrative",
+      "question": "What regulatory risks does Salesforce cite related to AI?",
+      "answer": "Based on the provided passages, Salesforce cites the following regulatory risks and related frameworks concerning AI:\n\n* Social, ethical, and regulatory issues, including the development, deployment, use, or capabilities of AI in their offerings [CRM 2026-01-31 1A 5].\n* Privacy concerns and laws, as well as evolving regulation of cloud computing and AI services [CRM 2026-01-31 1A 5].\n* Regulatory frameworks such as the EU AI Act, the EU Digital Services Act (DSA), and other rapidly evolving and sometimes conflicting global laws and regulations related to AI, privacy, and consumer protection, which could increase compliance costs, restrict features or data flows, delay launches, and expose the company to penalties or litigation [CRM 2026-01-31 1A 65].\n* Regulatory scrutiny resulting from AI applications being targeted, misused, performing in inaccurate, biased, unreliable, or harmful ways, or implicating personal or proprietary data [CRM 2026-01-31 1A 67, CRM 2026-01-31 1A 68].\n* Potential regulatory investigations, enforcement actions, monetary penalties, or other liabilities if customers or others rely to their detriment on AI-generated content (including through Agentforce and other generative AI offerings) that is inaccurate, misleading, biased, offensive, or unsafe, or if regulators assert claims relating to AI-generated content [CRM 2026-01-31 1A 70].",
+      "refused": false,
+      "best_distance": 0.276,
+      "cited_chunks": [
+        "CRM 2026-01-31 1A 5",
+        "CRM 2026-01-31 1A 67",
+        "CRM 2026-01-31 1A 68",
+        "CRM 2026-01-31 1A 70",
+        "CRM 2026-01-31 1A 65"
+      ],
+      "gold_answer": "Regulators are applying existing data protection, privacy and consumer protection laws to AI, including generative AI, and are enacting AI-specific frameworks: the EU AI Act, the Utah Artificial Intelligence Policy Act, the Colorado Artificial Intelligence Act and draft CCPA rules on automated decision-making. Rapidly evolving and sometimes conflicting global laws (including the EU Digital Services Act and EU AI Act) could increase compliance costs, restrict features or data flows, delay launches, and expose the company to penalties or litigation. These laws may impose additional compliance obligations or restrictions on products, services or business practices, and failure or perceived failure to comply could adversely affect the business. The uncertain regulatory environment may lead customers to limit the data they provide or their use of the products."
+    },
+    {
+      "id": "q03",
+      "type": "narrative",
+      "question": "How does Salesforce say AI affects its cybersecurity risk?",
+      "answer": "Salesforce states that as AI technologies (including generative and agentic AI) continue to evolve, threat actors are utilizing and exploiting these technologies to enhance and accelerate the sophistication, scale, speed, effectiveness, and personalization of cyberattacks [CRM 2026-01-31 1A 12, CRM 2026-01-31 1A 11]. These AI-driven threats may be more difficult to anticipate, detect, defend against, or mitigate [CRM 2026-01-31 1A 12, CRM 2026-01-31 1A 11].",
+      "refused": false,
+      "best_distance": 0.344,
+      "cited_chunks": [
+        "CRM 2026-01-31 1A 12",
+        "CRM 2026-01-31 1A 11",
+        "CRM 2026-01-31 1A 65",
+        "CRM 2026-01-31 1A 70",
+        "CRM 2026-01-31 1A 67"
+      ],
+      "gold_answer": "Threat actors use or exploit AI, including generative and agentic AI, to make attacks more sophisticated, faster, larger in scale and harder to detect. Salesforce's own adoption of AI in its products, services and internal systems may introduce novel security, data governance or operational risks."
+    },
+    {
+      "id": "q04",
+      "type": "narrative",
+      "question": "Who does ServiceNow say it competes with, and how does it characterize the market?",
+      "answer": "Based on the provided passages, ServiceNow characterizes the market as \"highly competitive and rapidly evolving\" and \"characterized by fragmentation, low barriers to entry, shifting customer needs and frequent introductions of new products and services\" [NOW 2025-12-31 1 48]. \n\nServiceNow states that it competes with a broad range of solutions and alternative approaches, including:\n* Enterprise application software vendors, both cloud-based and on-premises, specifically mentioning Microsoft, Oracle, SAP, Salesforce, and Workday [NOW 2025-12-31 1 48].\n* New technologies and entrants, including point-solutions and platform solutions, particularly those related to AI [NOW 2025-12-31 1 48].\n* Custom-developed solutions [NOW 2025-12-31 1 48 (note: sentence cuts off)].\n* Alternative solutions and approaches to solve customer needs, with additional competition expected as they shift products and services to compete with providers in new and adjacent markets [NOW 2025-12-31 1A 11].",
+      "refused": false,
+      "best_distance": 0.46,
+      "cited_chunks": [
+        "NOW 2025-12-31 1 41",
+        "NOW 2025-12-31 1A 11",
+        "NOW 2025-12-31 1 40",
+        "NOW 2025-12-31 1 39",
+        "NOW 2025-12-31 1 48"
+      ],
+      "gold_answer": "The market is highly competitive and rapidly evolving, characterized by fragmentation, low barriers to entry, shifting customer needs and frequent introductions of new products and services. Competitors include enterprise application software vendors, both cloud-based and on-premises, such as Microsoft, Oracle, SAP, Salesforce and Workday; new technologies and entrants, including point and platform solutions, particularly those related to AI; custom-developed and in-house solutions; technology consulting firms; systems integrators; and software resellers."
+    },
+    {
+      "id": "q05",
+      "type": "numeric",
+      "question": "What were Salesforce's total revenues for fiscal 2026, and how did that compare with fiscal 2025?",
+      "answer": "The provided passages state that for fiscal 2025, revenue was $37.9 billion [CRM 2025-01-31 7 6]. However, the passages do not contain Salesforce's total revenues for fiscal 2026, so that part of the comparison is missing.",
+      "refused": false,
+      "best_distance": 0.316,
+      "cited_chunks": [
+        "CRM 2025-01-31 7 6",
+        "CRM 2026-01-31 7 41",
+        "CRM 2025-01-31 7 9",
+        "CRM 2025-01-31 7 44",
+        "CRM 2025-01-31 7 43"
+      ],
+      "gold_answer": "Total revenues were $41,525 million in fiscal 2026 (year ended January 31, 2026), compared with $37,895 million in fiscal 2025, an increase of approximately 10%. Subscription and support revenues were $39,388 million, about 95 percent of the total."
+    },
+    {
+      "id": "q06",
+      "type": "numeric",
+      "question": "What did Adobe report for total revenue in fiscal 2025, and what was the growth rate versus fiscal 2024?",
+      "answer": "Adobe reported total revenue of $23,769 million in fiscal 2025 [ADBE 2025-11-28 7 23]. \n\nHowever, the provided passages do not contain the percentage growth rate for total revenue versus fiscal 2024 (the percentage values in the % Change column are left blank as \"% %\") [ADBE 2025-11-28 7 23].",
+      "refused": false,
+      "best_distance": 0.269,
+      "cited_chunks": [
+        "ADBE 2025-11-28 7 26",
+        "ADBE 2025-11-28 7 23",
+        "ADBE 2025-11-28 7 16",
+        "ADBE 2025-11-28 7 14",
+        "ADBE 2024-11-29 7 21"
+      ],
+      "gold_answer": "Total revenue was $23,769 million in fiscal 2025 (year ended November 28, 2025), up 11% from $21,505 million in fiscal 2024. Subscription revenue was $22,904 million (up 12%), about 96 percent of total revenue. Product revenue fell 16% to $325 million, and services and other fell 10% to $540 million."
+    },
+    {
+      "id": "q07",
+      "type": "numeric",
+      "question": "What was Workday's total subscription revenue backlog at January 31, 2026, and how did it change from the prior year?",
+      "answer": "As of January 31, 2026, Workday's total subscription revenue backlog was $28.1 billion [WDAY 2026-01-31 7 19]. This increased from $25.1 billion as of January 31, 2025 [WDAY 2026-01-31 7 19]. The increase in subscription revenue backlog was primarily driven by expansion within the existing customer base, sales to new customers, and the timing of renewals for existing customers [WDAY 2026-01-31 7 19].",
+      "refused": false,
+      "best_distance": 0.381,
+      "cited_chunks": [
+        "WDAY 2026-01-31 7 19",
+        "WDAY 2026-01-31 7 15",
+        "WDAY 2026-01-31 7 18",
+        "WDAY 2026-01-31 7 11",
+        "WDAY 2026-01-31 7 9"
+      ],
+      "gold_answer": "Total subscription revenue backlog was $28,101 million, up 12% from $25,056 million a year earlier. The 12-month subscription revenue backlog was $8,833 million, up 16% from $7,631 million."
+    },
+    {
+      "id": "q08",
+      "type": "cross-year",
+      "question": "How did the wording of Oracle's risk factor 'Our AI products may not operate as anticipated' change between its 2025 and 2026 10-Ks?",
+      "answer": "REFUSE",
+      "refused": true,
+      "best_distance": 0.466,
+      "cited_chunks": [
+        "ORCL 2026-05-31 1A 1",
+        "ORCL 2026-05-31 1 45",
+        "ORCL 2025-05-31 1 61",
+        "ORCL 2026-05-31 1A 17",
+        "ORCL 2025-05-31 1A 5"
+      ],
+      "gold_answer": "The 2026 filing adds or changes: (1) Oracle says it is building AI into many product offerings and making AI available for customers to use in solutions they build, and that it has made significant investments in AI initiatives including infrastructure and headcount, versus 2025's statement that it has invested and expects to continue investing significant resources; (2) a new trigger for failing to recoup AI investments, namely costs higher than expected to build and support AI products; (3) a new paragraph that AI models and training approaches may contain errors or limitations and that biased, incomplete or inaccurate data could produce offensive, unlawful, inaccurate or harmful outputs, with brand, competitive or legal harm if responsible-AI policies are ineffective; (4) copyright wording changed from improper use of protected material to inadvertent use or incorporation in model training or outputs; (5) expanded regulatory discussion: AI-specific rules being passed worldwide, the US framework still developing via executive orders and state legislation, EU AI Act obligations in effect and phasing in through 2030, and new risk of government restrictions on AI infrastructure, compute, model weights, cross-border AI services, customer access and localization or nationalization."
+    },
+    {
+      "id": "q09",
+      "type": "cross-year",
+      "question": "How did Intuit's description of its customer base, products and AI strategy change between its 2025 and 2026 10-K business sections?",
+      "answer": "Based on the provided passages, the details are as follows:\n\n* **Customer Base:** In the 2025 10-K, the Global Business Solutions segment is described as serving \"small and mid-market businesses around the world, and the accounting professionals who assist and advise them\" [INTU 2025-07-31 1 2]. The provided passages for the 2026 10-K do not explicitly describe the full customer base or mention the segment's specific focus on small and mid-market businesses, though they mention that during fiscal 2026 products and services were offered in two segments rather than the four segments mentioned in fiscal 2025 [INTU 2026-07-31 1 13, INTU 2025-07-31 1 10].\n* **Products:** In both years, Intuit describes platforms such as an all-in-one business platform (including financial management, payments and capital, compliance, human capital management, and marketing), a consumer platform (for taxes and personal finance/financial management), and products for accounting professionals [INTU 2026-07-31 1 1, INTU 2025-07-31 1 1]. However, the number of reportable segments changed: the 2025 10-K states that the business was organized into four reportable segments [INTU 2025-07-31 1 2, INTU 2025-07-31 1 10], while the 2026 10-K states that products and services were offered in two segments during fiscal 2026 [INTU 2026-07-31 1 13].\n* **AI Strategy:** In the 2025 10-K, Intuit mentions \"the combination of AI and human intelligence delivers done-for-you experiences, helps customers put more money in their pockets, and builds our mid-market business,\" and harnessing \"the power of data, data services, AI, and human intelligence that help customers reach their financial goals\" [INTU 2025-07-31 1 10, INTU 2025-07-31 1 1]. In the 2026 10-K, the description evolves to emphasize creating \"done-for-you experiences by automating everyday tasks, managing complex workflows and processes, and solving challenges before they arise with predictive insights,\" connecting customers \"to AI-enabled human experts for that last mile of decisions or to complete the work for them,\" and utilizing a \"powerful combination of proprietary data, domain-specific AI platform capabilities, and AI-powered human expertise\" [INTU 2026-07-31 1 1].",
+      "refused": false,
+      "best_distance": 0.301,
+      "cited_chunks": [
+        "INTU 2026-07-31 1 13",
+        "INTU 2025-07-31 1 10",
+        "INTU 2026-07-31 1 1",
+        "INTU 2025-07-31 1 1",
+        "INTU 2025-07-31 1 2"
+      ],
+      "gold_answer": "Customers served fell from approximately 100 million (2025) to approximately 93 million (2026). The product list added Intuit Accountant Suite to TurboTax, Credit Karma, QuickBooks, Mailchimp and Intuit Enterprise Suite. The AI strategy wording changed from connecting customers to a virtual team of AI agents and AI-enabled human experts to bringing together data, AI, and human tax and financial experts into a single system of intelligence that does the work for customers. The 2026 filing also adds that proprietary data, domain-specific AI platform capabilities and AI-powered human expertise help customers make high-stakes financial decisions with confidence."
+    },
+    {
+      "id": "q10",
+      "type": "unanswerable",
+      "question": "What discount percentage does Workday give its largest enterprise customers?",
+      "answer": "REFUSE",
+      "refused": true,
+      "best_distance": 0.504,
+      "cited_chunks": [
+        "WDAY 2026-01-31 1 14",
+        "WDAY 2026-01-31 1 0",
+        "WDAY 2026-01-31 1 22",
+        "WDAY 2026-01-31 1 21",
+        "WDAY 2026-01-31 1 18"
+      ],
+      "gold_answer": "UNANSWERABLE"
+    },
+    {
+      "id": "q11",
+      "type": "unanswerable",
+      "question": "What is Microsoft's internal gross margin target for Azure next year?",
+      "answer": "REFUSE",
+      "refused": true,
+      "best_distance": 0.346,
+      "cited_chunks": [
+        "MSFT 2026-06-30 7 22",
+        "MSFT 2026-06-30 7 15",
+        "MSFT 2026-06-30 7 16",
+        "MSFT 2026-06-30 7 11",
+        "MSFT 2026-06-30 7 10"
+      ],
+      "gold_answer": "UNANSWERABLE"
+    },
+    {
+      "id": "q12",
+      "type": "unanswerable",
+      "question": "What was Palo Alto Networks' revenue for fiscal 2030?",
+      "answer": "REFUSE",
+      "refused": true,
+      "best_distance": 0.423,
+      "cited_chunks": [
+        "PANW 2026-07-31 1 75",
+        "PANW 2026-07-31 1 77",
+        "PANW 2026-07-31 1 0",
+        "PANW 2026-07-31 7 30",
+        "PANW 2026-07-31 7 47"
+      ],
+      "gold_answer": "UNANSWERABLE"
+    },
+    {
+      "id": "q13",
+      "type": "unanswerable",
+      "question": "What is the name of ServiceNow's largest individual customer by annual contract value?",
+      "answer": "REFUSE",
+      "refused": true,
+      "best_distance": 0.421,
+      "cited_chunks": [
+        "NOW 2025-12-31 7 10",
+        "NOW 2025-12-31 1 40",
+        "NOW 2025-12-31 7 11",
+        "NOW 2025-12-31 7 35",
+        "NOW 2025-12-31 7 43"
+      ],
+      "gold_answer": "UNANSWERABLE"
+    },
+    {
+      "id": "q14",
+      "type": "cross-year",
+      "question": "How did Salesforce's discussion of agentic AI in its risk factors change between its fiscal 2025 and fiscal 2026 10-Ks?",
+      "answer": "REFUSE",
+      "refused": true,
+      "best_distance": 0.42,
+      "cited_chunks": [
+        "CRM 2025-01-31 1 23",
+        "CRM 2025-01-31 7 8",
+        "CRM 2025-01-31 7 1",
+        "CRM 2026-01-31 1A 69",
+        "CRM 2025-01-31 1A 70"
+      ],
+      "gold_answer": "Both filings mention agentic AI in the risk of scaling operations (additional investments) and in the risk that AI offerings such as Agentforce present adoption challenges. The fiscal 2026 filing adds a cybersecurity risk: as generative and agentic AI evolve, threat actors are using and exploiting them to make security threats more sophisticated, faster, larger in scale and harder to detect. The platform is named Salesforce Platform in fiscal 2025 and Agentforce 360 Platform in fiscal 2026."
+    },
+    {
+      "id": "q15",
+      "type": "cross-year",
+      "question": "How did Microsoft's explanation of its Microsoft Cloud gross margin percentage change between its fiscal 2025 and fiscal 2026 10-Ks?",
+      "answer": "Based on the provided passages, Microsoft's explanation for the change in its Microsoft Cloud gross margin percentage changed as follows:\n\n* **In the fiscal 2025 10-K (describing Fiscal Year 2025 Compared with Fiscal Year 2024):** The Microsoft Cloud gross margin percentage decreased to 69% driven by \"the impact of scaling our AI infrastructure, offset in part by efficiency gains in Azure\" [MSFT 2025-06-30 7 16].\n* **In the fiscal 2026 10-K (describing Fiscal Year 2026 Compared with Fiscal Year 2025):** The Microsoft Cloud gross margin percentage decreased to 66% driven by \"continued investments in AI infrastructure and growing AI product usage, offset in part by efficiency gains in Azure and Microsoft 365 Commercial cloud\" [MSFT 2026-06-30 7 16].",
+      "refused": false,
+      "best_distance": 0.351,
+      "cited_chunks": [
+        "MSFT 2026-06-30 7 15",
+        "MSFT 2025-06-30 7 16",
+        "MSFT 2025-06-30 7 11",
+        "MSFT 2026-06-30 7 16",
+        "MSFT 2025-06-30 7 17"
+      ],
+      "gold_answer": "Microsoft Cloud gross margin percentage decreased to 69% in fiscal 2025, driven by the impact of scaling AI infrastructure and offset in part by Azure efficiency gains. It decreased further to 66% in fiscal 2026, driven by continued investments in AI infrastructure and growing AI product usage, offset in part by efficiency gains in Azure and Microsoft 365 Commercial cloud."
+    }
+  ]
+}

@@ -84,3 +84,19 @@ Findings: company routing found the right company on 15 of 15 questions and roug
 
 Change: one edit in route.py. Run 4 routed was fixed 4/11, 5/11, 6/11 and section 3/11, 4/11, 7/11. Routed now sits within one question of filtered. Caveat: most questions target the newest filing, so the default favors this test set. A first attempt at the edit routed every question to PANW because of a stale bytecode cache; clearing src/\_\_pycache\_\_ fixed it.
 
+
+
+\## Run 6: answer step (routed retrieval, fixed chunks, prompt with REFUSE rule)
+
+
+
+| model | unanswerable refused | answerable wrongly refused | errors |
+
+|---|---|---|---|
+
+| gemini-flash-lite-latest (alias) | 4/4 | 2/11 (q08, q14, cross-year) | 0 |
+
+
+
+Caveats: n=4 unanswerable; answer quality and faithfulness not yet scored; alias model, not pinned.
+
