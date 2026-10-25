@@ -17,18 +17,18 @@ PARA_MAX_WORDS = 150
 
 
 def clean(text):
+    lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
     keep = []
-    for ln in text.split("\n"):
-        s = ln.strip()
-        if not s:
+    for i, s in enumerate(lines):
+        low = s.lower()
+        if low in ("table of contents", "part i", "part ii", "part iii"):
             continue
         if re.fullmatch(r"\d{1,3}", s):
-            continue
-        if s.lower() in ("table of contents", "part i", "part ii", "part iii"):
-            continue
+            nxt = lines[i + 1].lower() if i + 1 < len(lines) else ""
+            if nxt in ("table of contents",) or nxt.startswith("part "):
+                continue
         keep.append(s)
     return "\n".join(keep)
-
 
 def fixed_chunks(text):
     words = text.split()

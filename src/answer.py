@@ -33,18 +33,27 @@ QUESTION: {question}
 
 ANSWER:"""
 
-
 def retrieve(question):
     tick, periods = route(question)
-    where = build_where(tick, periods)
     emb = embedder.encode([question]).tolist()
-    kw = dict(query_embeddings=emb, n_results=K,
-              include=["documents", "metadatas", "distances"])
-    if where:
-        kw["where"] = where
-    r = col.query(**kw)
-    return r["documents"][0], r["metadatas"][0], r["distances"][0]
 
+    def run(where, n):
+        kw = dict(query_embeddings=emb, n_results=n,
+                  include=["documents", "metadatas", "distances"])
+        if where:
+            kw["where"] = where
+        r = col.query(**kw)
+        return list(zip(r["documents"][0], r["metadatas"][0], r["distances"][0]))
+
+    if tick and len(periods) > 1:
+        hits = []
+        for p in periods:
+            hits += run({"$and": [{"company": tick}, {"period": p}]}, 3)
+    else:
+        hits = run(build_where(tick, periods), K)
+    hits.sort(key=lambda h: h[2])
+    docs, metas, dists = zip(*hits)
+    return list(docs), list(metas), list(dists)
 
 def call_model(prompt):
     # the only provider-specific function: swap this to change models
