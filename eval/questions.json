@@ -235,5 +235,65 @@
     "gold_answer": "The cloud and software business represented 87% of total revenues in fiscal 2026 (86% in fiscal 2025), and the hardware business represented 5% (5% in fiscal 2025).",
     "source_quote": "which represented 87% and 86% of our total revenues in fiscal 2026 and 2025, respectively",
     "source_item": "7"
+  },
+  {
+    "id": "q24",
+    "type": "numeric",
+    "company": "MSFT",
+    "period": "2026-06-30",
+    "question": "By how much did Microsoft's Azure and other cloud services revenue grow in fiscal 2026, and what drove it?",
+    "gold_answer": "Azure and other cloud services revenue grew 41%, driven by demand for services across the platform with continued growth across all workloads.",
+    "source_quote": "Azure and other cloud services revenue grew 41% driven by demand for services across the platform",
+    "source_item": "7"
+  },
+  {
+    "id": "q25",
+    "type": "numeric",
+    "company": "INTU",
+    "period": "2026-07-31",
+    "question": "What was Intuit's total net revenue in fiscal 2026 and how much did it grow versus fiscal 2025?",
+    "gold_answer": "Total net revenue was $21,448 million in fiscal 2026 versus $18,831 million in fiscal 2025, an increase of $2.6 billion, or 14%.",
+    "source_quote": "Total net revenue increased $2.6 billion, or 14%, in fiscal 2026 compared with fiscal 2025",
+    "source_item": "7"
+  },
+  {
+    "id": "q26",
+    "type": "numeric",
+    "company": "PANW",
+    "period": "2026-07-31",
+    "question": "What was Palo Alto Networks' total revenue in fiscal 2026 and what was the year-over-year growth?",
+    "gold_answer": "Total revenue was $11,480 million (about $11.5 billion) in fiscal 2026 versus $9,221 million in fiscal 2025, year-over-year growth of 24%.",
+    "source_quote": "total revenue was $11.5 billion and $9.2 billion, respectively, representing year-over-year growth of 24%",
+    "source_item": "7"
+  },
+  {
+    "id": "q27",
+    "type": "numeric",
+    "company": "PANW",
+    "period": "2026-07-31",
+    "question": "What share of Palo Alto Networks' fiscal 2026 total revenue came from subscription and support, and how fast did it grow?",
+    "gold_answer": "Subscription and support revenue grew to $9.2 billion, or 80.1% of total revenue for fiscal 2026, representing year-over-year growth of 24%.",
+    "source_quote": "Our subscription and support revenue grew to $9.2 billion, or 80.1% of total revenue for fiscal 2026",
+    "source_item": "7"
+  },
+  {
+    "id": "q28",
+    "type": "narrative",
+    "company": "ADBE",
+    "period": "2025-11-28",
+    "question": "How does Adobe describe AI-related competition in its risk factors?",
+    "gold_answer": "Adobe expects to face more competition as AI advances and is integrated into its markets. Competitors may develop AI solutions more rapidly or successfully, including through different data training strategies or proprietary data access, and it faces growing competition from generative and agentic AI offerings such as prompt-based and multi-modal creation and editing, document productivity, ad creation and purpose-built AI agents. Other companies may limit its use of third-party models. Failing to compete could reduce sales.",
+    "source_quote": "we face increasing competition from companies offering generative and agentic AI solutions",
+    "source_item": "1A"
+  },
+  {
+    "id": "q29",
+    "type": "numeric",
+    "company": "WDAY",
+    "period": "2026-01-31",
+    "question": "How many users under contract does Workday report, and what share of the Fortune 500 are its customers?",
+    "gold_answer": "More than 75 million users under contract, including more than 65% of the Fortune 500.",
+    "source_quote": "more than 75 million users under contract around the world",
+    "source_item": "1"
   }
 ]
