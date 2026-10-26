@@ -215,5 +215,25 @@
     "gold_answer": "UNANSWERABLE",
     "source_quote": "",
     "source_item": "none"
+  },
+  {
+    "id": "q22",
+    "type": "numeric",
+    "company": "ORCL",
+    "period": "2026-05-31",
+    "question": "What share of Oracle's total revenues came from cloud revenues in fiscal 2026, and how did that compare with fiscal 2025?",
+    "gold_answer": "Cloud revenues represented 51% of total revenues in fiscal 2026, up from 43% in fiscal 2025.",
+    "source_quote": "Cloud revenues represented 51% and 43% of our total revenues during fiscal 2026 and 2025, respectively",
+    "source_item": "7"
+  },
+  {
+    "id": "q23",
+    "type": "numeric",
+    "company": "ORCL",
+    "period": "2026-05-31",
+    "question": "What percentage of Oracle's total revenues came from its cloud and software business and its hardware business in fiscal 2026?",
+    "gold_answer": "The cloud and software business represented 87% of total revenues in fiscal 2026 (86% in fiscal 2025), and the hardware business represented 5% (5% in fiscal 2025).",
+    "source_quote": "which represented 87% and 86% of our total revenues in fiscal 2026 and 2025, respectively",
+    "source_item": "7"
   }
 ]
