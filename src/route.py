@@ -2,12 +2,12 @@ import re
 from pathlib import Path
 
 ALIASES = {
-    "MSFT": r"\bmicrosoft\b|\bmsft\b",
+    "MSFT": r"\bmicrosoft\b|\bmsft\b|\bazure\b",
     "ORCL": r"\boracle\b|\borcl\b",
-    "CRM": r"\bsalesforce\b|\bcrm\b",
-    "ADBE": r"\badobe\b|\badbe\b",
+    "CRM": r"\bsalesforce\b|\bcrm\b|\bagentforce\b",
+    "ADBE": r"\badobe\b|\badbe\b|\bfirefly\b",
     "NOW": r"\bservicenow\b|\bservice now\b",
-    "INTU": r"\bintuit\b|\bintu\b",
+    "INTU": r"\bintuit\b|\bintu\b|\bturbotax\b|\bquickbooks\b",
     "WDAY": r"\bworkday\b|\bwday\b",
     "PANW": r"\bpalo alto\b|\bpanw\b",
 }
@@ -45,3 +45,4 @@ def build_where(tick, periods):
     elif len(periods) > 1:
         clauses.append({"period": {"$in": periods}})
     return clauses[0] if len(clauses) == 1 else {"$and": clauses}
+
