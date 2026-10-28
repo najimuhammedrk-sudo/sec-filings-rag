@@ -1,6 +1,7 @@
 \# Retrieval results log (K=5)
 
 
+
 Note: from Run 8 on, the answer step sends 6 to 9 chunks per question, not 5.
 
 
@@ -76,6 +77,7 @@ Findings: company routing found the right company on 15 of 15 questions and roug
 \## Run 5: routing defaults to the latest filing when no year is named
 
 
+
 | mode | collection | hit@1/3/5 (all 11) |
 
 |---|---|---|
@@ -137,6 +139,7 @@ Caveats: n=10 unanswerable, mostly specific-figure-not-disclosed cases; faithful
 Change: one edit in answer.py retrieve(). Run 7 was 10/10 and 2/11. q05 now correct; q06, q08 partial; q09 off-target; q14 refused. Refusal score does not measure answer correctness. Caveat: the change targeted questions in this set.
 
 
+
 \## Run 9: index cleaning no longer deletes short numeric table lines
 
 
@@ -168,5 +171,20 @@ Change: clean() in index.py. Chunks: fixed 6272 to 6290, section 5653 to 5660. C
 Change: keyword\_hits() merged into retrieve(); candidates scored by word overlap plus count of $ figures when the question asks about revenue, growth, total or rate. First version (word overlap only) did not change q06; the figure-density version retrieves the table chunk containing 23,769 and 11 %. Caveat: the scoring was adjusted after seeing q06 fail, so this is tuned on the test set; needs fresh numeric questions to confirm.
 
 
+
 q06 now answers correctly ($23,769 million, up 11%, cited to chunk 23); Run 9 refused it. Unanswerable score unchanged at 10/10.
+
+## Run 11: fresh questions q22-q29 added (no code changes)
+
+
+
+| model | unanswerable refused | answerable wrongly refused | errors |
+
+|---|---|---|---|
+
+| gemini-flash-lite-latest (alias) | 10/10 | 1/19 (q14) | 0 |
+
+
+
+Change: 8 new answerable questions written before seeing outputs (6 numeric, 1 narrative, 1 prose-count). None refused. By-eye check: q22-q26 and q29 match gold; q27 core correct, extra figures being verified; q28 under review. Caveats: questions chosen from clean prose facts, so easier than average; no rubric; alias model.
 
