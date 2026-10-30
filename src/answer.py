@@ -11,7 +11,7 @@ from sentence_transformers import SentenceTransformer
 from route import route, build_where
 
 load_dotenv()
-MODEL = "gemini-flash-lite-latest"  # change to the model name shown in AI Studio
+MODEL = "gemini-3.1-flash-lite"  # change to the model name shown in AI Studio
 COLLECTION = "fixed"
 K = 5
 

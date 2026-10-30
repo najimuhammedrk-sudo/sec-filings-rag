@@ -5,7 +5,7 @@ import time
 sys.path.insert(0, "src")
 from answer import answer, MODEL
 
-PAUSE = 6  # seconds between calls, for the free-tier rate limit
+PAUSE = 20  # seconds between calls, for the free-tier rate limit
 qs = json.load(open("eval/questions.json", encoding="utf-8"))
 rows = []
 
