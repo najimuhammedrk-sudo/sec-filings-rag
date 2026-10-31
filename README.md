@@ -45,3 +45,7 @@ Python, requests, BeautifulSoup, sentence-transformers (all-MiniLM-L6-v2), Chrom
 3. Build the data: python src\ingest.py, then python src\parse_sections.py, then python src\index.py
 4. Ask a question: python src\answer.py your question here
 5. Run the evaluation: python eval\run_answers.py
+
+![Retrieval hit@5](docs/retrieval_hit5.png)
+![Wrongly refused](docs/wrongly_refused.png)
+![Unanswerable refused](docs/unanswerable_refused.png)
