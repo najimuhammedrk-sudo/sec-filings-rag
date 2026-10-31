@@ -20,7 +20,7 @@ Evaluation set: 29 questions written from the filing text before reading model o
 
 Retrieval findings:
 
-- Removing the company and year filter dropped hit@5 on single-filing questions from 7/7 to 2/7. Detecting the company in the question recovered most of that, and defaulting to the latest filing when no year is named got within one question of the hand-filtered upper bound.
+- Retrieval hit@5 on the 11 early answerable questions (fixed chunks): hand-filtered 9, company routing with latest-filing default 8, routing without the default 6, no filter 3. On the 7 single-filing questions alone, removing the filter dropped hit@5 from 7/7 to 2/7. Most questions target the newest filing, so the latest-filing default favors this test set.
 - A distance cutoff cannot decide refusal: distances for unanswerable and answerable questions overlap fully, so refusal comes from the answer prompt.
 - Table percentages were missing from retrieved chunks because my cleaning step deleted short numeric lines. Fixing that, then adding figure-density keyword matching, made the Adobe revenue-growth question answer correctly.
 
