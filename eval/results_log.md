@@ -189,6 +189,7 @@ q06 now answers correctly ($23,769 million, up 11%, cited to chunk 23); Run 9 re
 Change: 8 new answerable questions written before seeing outputs (6 numeric, 1 narrative, 1 prose-count). None refused. By-eye check: q22-q26 and q29 match gold; q27 core correct, extra figures being verified; q28 under review. Caveats: questions chosen from clean prose facts, so easier than average; no rubric; alias model.
 
 
+
 ## Run 12: router aliases, fixed model name
 
 
@@ -197,9 +198,7 @@ Change: 8 new answerable questions written before seeing outputs (6 numeric, 1 n
 
 |---|---|---|---|
 
-| gemini-3.1-flash-lite | x/10 | y/19 | 0 |
-
-
+| gemini-3.1-flash-lite | 10/10 | 1/19 (q14) | 0 |
 
 Changes: product aliases added to route.py; model changed from the lite alias to a fixed name; pause raised to 20 seconds. Different model, so not directly comparable with Runs 6 to 11.
 
