@@ -29,7 +29,7 @@ Limitations:
 - Small sample: 10 unanswerable questions is a direction, not a rate.
 - Answer correctness was judged by eye against my gold answers, with no second rater.
 - The figure-density scoring was adjusted after seeing one failing question, so it is tuned on part of this set. The 8 fresh questions were chosen from clean prose facts, so they are easier than average.
-- The model is the gemini-flash-lite-latest alias, not a pinned version.
+- The model is gemini-3.1-flash-lite (a fixed name). Earlier runs used the gemini-flash-lite-latest alias.
 - Cross-year questions are the weakest area: q14 is still wrongly refused.
 
 Full run history: eval/results_log.md
