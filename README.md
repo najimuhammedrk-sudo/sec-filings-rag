@@ -37,3 +37,11 @@ Full run history: eval/results_log.md
 ## Tools
 
 Python, requests, BeautifulSoup, sentence-transformers (all-MiniLM-L6-v2), ChromaDB, Gemini API
+
+## How to run
+
+1. Install: pip install -r requirements.txt
+2. Create a file named .env containing GEMINI_API_KEY=your_key
+3. Build the data: python src\ingest.py, then python src\parse_sections.py, then python src\index.py
+4. Ask a question: python src\answer.py your question here
+5. Run the evaluation: python eval\run_answers.py
