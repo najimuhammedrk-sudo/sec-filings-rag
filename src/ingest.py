@@ -4,7 +4,7 @@ import time
 from pathlib import Path
 import requests
 
-HEADERS = {"User-Agent": "najimuhammedrk@gmail.com"}
+HEADERS = {"User-Agent": "Naji Muhammed najimuhammedrk@gmail.com"}
 TICKERS = ["MSFT", "ORCL", "CRM", "ADBE", "NOW", "INTU", "WDAY", "PANW"]
 RAW = Path("data/raw")
 YEARS = 3
